@@ -1,20 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar color="primary">
+    <ion-title class="header-title">Control de LED</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content >
+  <div class="button-container">
+    <ion-button (click)="toggleState()" [color]="ledstatus ? 'success' : 'medium'" expand="block" class="led-button">
+      <ion-icon [name]="ledstatus ? 'bulb' : 'bulb-outline'" slot="start"></ion-icon>
+      {{ ledstatus ? 'Encendido' : 'Apagado' }}
+    </ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-button (click)="toggleState2()" [color]="ledstatus2 ? 'success' : 'medium'" expand="block" class="led-button">
+      <ion-icon [name]="ledstatus2 ? 'bulb' : 'bulb-outline'" slot="start"></ion-icon>
+      {{ ledstatus2 ? 'Encendido' : 'Apagado' }}
+    </ion-button>
+
+    <ion-button (click)="toggleState3()" [color]="ledstatus3 ? 'success' : 'medium'" expand="block" class="led-button">
+      <ion-icon [name]="ledstatus3 ? 'bulb' : 'bulb-outline'" slot="start"></ion-icon>
+      {{ ledstatus3 ? 'Encendido' : 'Apagado' }}
+    </ion-button>
+
+    <ion-button (click)="toggleState4()" [color]="ledstatus4 ? 'success' : 'medium'" expand="block" class="led-button">
+      <ion-icon [name]="ledstatus4 ? 'bulb' : 'bulb-outline'" slot="start"></ion-icon>
+      {{ ledstatus4 ? 'Encendido' : 'Apagado' }}
+    </ion-button>
   </div>
 </ion-content>

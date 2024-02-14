@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "iote3-9954c": {
+      "hosting": {
+        "app": [
+          "iote3-9954c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "iote3-9954c"
+  }
+}
